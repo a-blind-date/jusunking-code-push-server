@@ -6,9 +6,6 @@ param az_location string = 'eastus'
 param github_client_id string
 @secure()
 param github_client_secret string
-param microsoft_client_id string
-@secure()
-param microsoft_client_secret string
 param logging bool = true
 
 var servicePlanName = 'codepush-asp-${project_suffix}'
@@ -60,8 +57,6 @@ resource webApp 'Microsoft.Web/sites@2022-03-01' = {
         { name: 'AZURE_STORAGE_ACCESS_KEY', value: storageAccount.listKeys().keys[0].value }
         { name: 'GITHUB_CLIENT_ID', value: github_client_id }
         { name: 'GITHUB_CLIENT_SECRET', value: github_client_secret }
-        { name: 'MICROSOFT_CLIENT_ID', value: microsoft_client_id }
-        { name: 'MICROSOFT_CLIENT_SECRET', value: microsoft_client_secret }
         { name: 'WEBSITE_NODE_DEFAULT_VERSION', value: '18-lts' }
         { name: 'SERVER_URL', value: serverUrl }
         { name: 'CORS_ORIGIN', value: serverUrl }

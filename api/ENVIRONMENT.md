@@ -11,7 +11,7 @@ For convenience, we will also load the server environment from any '.env' file i
 #### Local
 
 To emulate Azure Blob Storage locally. Azurite needs to be installed and running, more info [here](README.md#local).
-- `EMULATED`: Set to 'true' in order to use the local emulator instead of a hosted instance
+- `EMULATED`: false
 
 #### Azure
 - `AZURE_STORAGE_ACCOUNT`: The name of your hosted Azure storage instance
@@ -19,7 +19,7 @@ To emulate Azure Blob Storage locally. Azurite needs to be installed and running
 
 ### Authentication 
 
-- `SERVER_URL`: The URL of your server, for local deployment it will be either http://localhost:3000 or https://localhost:8443. For Azure it will be your Azure App URL
+- `SERVER_URL`: https://jusunking-code-push-server-bzdkh9gxaqcshkec.southeastasia-01.azurewebsites.net/
 
 #### GitHub OAuth 
 
